@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "TrojanLens: code and line-annotated RTL dataset"
+message: "If you use this software or dataset, please cite it and the associated paper."
+type: software
+authors:
+  - given-names: "Md Ariful Islam"
+    family-names: "Bhuiyan"
+    orcid: "https://orcid.org/0009-0001-7463-5020"
+    affiliation: "California State University, Northridge"
+  - given-names: "Dipta"
+    family-names: "Roy"
+    orcid: "https://orcid.org/0009-0006-7065-6146"
+    affiliation: "California State University, Northridge"
+  - given-names: "Kazi Mushfiq"
+    family-names: "Rafid"
+    orcid: "https://orcid.org/0009-0003-5271-2659"
+    affiliation: "California State University, Northridge"
+  - given-names: "Kazi Mohammed"
+    family-names: "Zabeer"
+    orcid: "https://orcid.org/0009-0007-2404-3629"
+    affiliation: "California State University, Northridge"
+  - given-names: "Somnath"
+    family-names: "Chattopadhyay"
+    orcid: "https://orcid.org/0000-0002-5035-2253"
+    affiliation: "California State University, Northridge"
+# After publishing on Zenodo, paste the minted DOI here:
+# doi: "10.5281/zenodo.XXXXXXX"
+version: "1.0.0"
+date-released: "2026-07-19"
+license: MIT
+repository-code: "https://github.com/<your-username>/trojanlens"
