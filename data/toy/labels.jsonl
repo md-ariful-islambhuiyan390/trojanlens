@@ -1,2 +1,0 @@
-{"file": "design_clean.v", "label": 0, "trojan_lines": []}
-{"file": "design_trojan.v", "label": 1, "trojan_lines": [25, 26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 66, 67]}
