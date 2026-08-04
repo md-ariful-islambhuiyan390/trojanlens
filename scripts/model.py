@@ -172,18 +172,12 @@ if _TORCH:
             elif dtype in ("float16", "fp16"):
                 torch_dtype = torch.float16
 
-            # low_cpu_mem_usage avoids a transient 2x copy during load;
-            # transformers >=5 renamed torch_dtype -> dtype, so try dtype first.
             load_kwargs = dict(trust_remote_code=True, low_cpu_mem_usage=True)
             if torch_dtype is not None:
                 try:
-                    encoder = AutoModel.from_pretrained(
-                        model_name, dtype=torch_dtype, **load_kwargs
-                    )
+                    encoder = AutoModel.from_pretrained(model_name, dtype=torch_dtype, **load_kwargs)
                 except TypeError:
-                    encoder = AutoModel.from_pretrained(
-                        model_name, torch_dtype=torch_dtype, **load_kwargs
-                    )
+                    encoder = AutoModel.from_pretrained(model_name, torch_dtype=torch_dtype, **load_kwargs)
             else:
                 encoder = AutoModel.from_pretrained(model_name, **load_kwargs)
 
