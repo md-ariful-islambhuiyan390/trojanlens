@@ -1,0 +1,2 @@
+{"file": "design_clean.v", "y_true": 0, "y_pred": 1, "n_lines": 63, "gt_lines": [], "pred_lines": [4, 25, 51, 61, 63], "verified": false, "trojan_prob": 1.0}
+{"file": "design_trojan.v", "y_true": 1, "y_pred": 1, "n_lines": 85, "gt_lines": [25, 26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 66, 67], "pred_lines": [5, 12, 38, 83, 85], "verified": false, "trojan_prob": 1.0}
