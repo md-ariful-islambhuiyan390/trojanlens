@@ -24,7 +24,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-5035-2253"
     affiliation: "California State University, Northridge"
 doi: "10.5281/zenodo.21779440"
-version: "1.0.0"
-date-released: "2026-08-03"
+version: "1.1.0"
+date-released: "2026-09-21"
 license: MIT
 repository-code: "https://github.com/md-ariful-islambhuiyan390/trojanlens"
