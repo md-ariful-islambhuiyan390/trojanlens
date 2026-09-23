@@ -76,6 +76,10 @@ def main(argv=None):
                     help="skip faithfulness verification (fast Det F1 + localization "
                          "only). Use for the obfuscation robustness sweep on CPU.")
     ap.add_argument("--out", default=None, help="override output predictions path")
+    ap.add_argument("--seed", type=int, default=None,
+                    help="override cfg seed (for multi-seed variability runs, R1-m2)")
+    ap.add_argument("--alpha", type=float, default=None,
+                    help="override focal-loss alpha (for the alpha ablation, R2-5)")
     args = ap.parse_args(argv)
 
     import torch
@@ -91,9 +95,14 @@ def main(argv=None):
     lr = float(tcfg.get("learning_rate", 2e-4))
     gamma = float(tcfg.get("focal_gamma", 2.0))
     alpha = float(tcfg.get("focal_alpha", 0.75))
+    if args.alpha is not None:
+        alpha = args.alpha
     pos_weight = float(tcfg.get("loc_pos_weight", 8.0))
     top_k = int(cfg.get("verify", {}).get("top_k", 5))
     seed = int(tcfg.get("seed", 1234))
+    if args.seed is not None:
+        seed = args.seed
+    print(f"[exp] seed={seed}  focal_alpha={alpha}")
     random.seed(seed)
     torch.manual_seed(seed)
 
